@@ -13,12 +13,13 @@ namespace API
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            config.Formatters.XmlFormatter.UseXmlSerializer = true;
+            /*
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
-            );
+            );*/
         }
     }
 }
